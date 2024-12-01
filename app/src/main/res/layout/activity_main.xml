@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Rectángulo superior -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#267093">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TECHDITO"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <ImageView
+            android:id="@+id/sidebarIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_menu" />
+    </RelativeLayout>
+
+    <!-- Cuadro de información -->
+    <RelativeLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:background="@drawable/rounded_background_home"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:clipToPadding="false">
+
+    <!-- Información Inicial -->
+    <TextView
+        android:id="@+id/inicialText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250 Inicial"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@drawable/outline_circle_24"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <!-- Información en Curso -->
+    <TextView
+        android:id="@+id/enCursoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 en Curso"
+        android:layout_below="@id/inicialText"
+        android:drawableLeft="@drawable/outline_access_time_24"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <!-- Información en Ejecución -->
+    <TextView
+        android:id="@+id/enEjecucionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 en Ejecución"
+        android:layout_below="@id/enCursoText"
+        android:drawableLeft="@drawable/baseline_check_circle_outline_24"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <!-- Información Rechazadas -->
+    <TextView
+        android:id="@+id/rechazadasText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Rechazadas"
+        android:layout_below="@id/enEjecucionText"
+        android:drawableLeft="@drawable/baseline_do_not_disturb_24"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_semibold"/>
+</RelativeLayout>
+
+    <!-- Barra de navegación inferior -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#267093"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Botón de inicio -->
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/round_home_24"
+            android:background="@null" />
+
+        <!-- Botón de registro -->
+        <ImageButton
+            android:id="@+id/registerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/round_view_list_24"
+            android:background="@null" />
+
+        <!-- Botón de configuración -->
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/round_settings_24"
+            android:background="@null" />
+        </LinearLayout>
+    </RelativeLayout>
